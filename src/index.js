@@ -7,9 +7,10 @@ const PORT = 5000;
 
 //Handlebrs configuration
 app.engine('hbs', handlebars.engine({
-    extname: 'hbs'
+    extname: 'hbs',
 }));
-app.set('viw engine', 'hbs');
+app.set('view engine', 'hbs');
+app.set('views', 'src/views');  //nastroiva se, zashtoto direktoriqta e razlichna ot defaultnata
 
 //Routes
 app.get('/', (req, res) => { //parvi endpoint
